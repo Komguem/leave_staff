@@ -146,7 +146,7 @@
 				<div class="col-lg-4 col-md-6 mb-20">
 					<div class="card-box height-100-p pd-20 min-height-200px">
 						<div class="d-flex justify-content-between pb-10">
-							<div class="h5 mb-0">CHEF DE DÉPARTEMENT</div>
+							<div class="h5 mb-0">Head of department </div>
 							<div class="table-actions">
 								<a title="VIEW" href="staff.php"><i class="icon-copy ion-disc" data-color="#17a2b8"></i></a>	
 							</div>
