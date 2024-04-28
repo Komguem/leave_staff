@@ -28,12 +28,12 @@
 				<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>Leave Portal</h4>
+								<h4>Portail des Congés</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="admin_dashboard.php">Dashboard</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Approved Leave</li>
+									<li class="breadcrumb-item"><a href="admin_dashboard.php">Tableau de bord</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Congés approuvés</li>
 								</ol>
 							</nav>
 						</div>
@@ -42,17 +42,17 @@
 
 			<div class="card-box mb-30">
 				<div class="pd-20">
-						<h2 class="text-blue h4">APPROVED LEAVE</h2>
+						<h2 class="text-blue h4">Congés approuvés</h2>
 					</div>
 				<div class="pb-20">
 					<table class="data-table table stripe hover nowrap">
 						<thead>
 							<tr>
-								<th class="table-plus datatable-nosort">STAFF NAME</th>
-								<th>LEAVE TYPE</th>
-								<th>APPLIED DATE</th>
-								<th>HOD STATUS</th>
-								<th>REG. STATUS</th>
+								<th class="table-plus datatable-nosort">NOM DU PERSONNEL</th>
+								<th>TYPE DE CONGÉ</th>
+								<th>DATE de DEMANDE</th>
+								<th>Avis CD</th>
+								<th>STATUT RH</th>
 								<th class="datatable-nosort">ACTION</th>
 							</tr>
 						</thead>

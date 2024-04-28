@@ -45,7 +45,7 @@
 <body>
 	<div class="pre-loader">
 		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="../vendors/images/Logo.png" alt=""></div>
+			<div class="loader-logo"><img src="../vendors/images/Image3.png" alt=""></div>
 			<div class='loader-progress' id="progress_div">
 				<div class='bar' id='bar1'></div>
 			</div>
@@ -71,12 +71,12 @@
 						<div class="row">
 							<div class="col-md-6 col-sm-12">
 								<div class="title">
-									<h4>type de conge</h4>
+									<h4>Type de congé</h4>
 								</div>
 								<nav aria-label="breadcrumb" role="navigation">
 									<ol class="breadcrumb">
-										<li class="breadcrumb-item"><a href="admin_dashboard.php">Dashboard</a></li>
-										<li class="breadcrumb-item active" aria-current="page">module type de conge</li>
+										<li class="breadcrumb-item"><a href="admin_dashboard.php">Tableau de bord</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Module type de congé</li>
 									</ol>
 								</nav>
 							</div>
@@ -86,13 +86,13 @@
 					<div class="row">
 						<div class="col-lg-4 col-md-6 col-sm-12 mb-30">
 							<div class="card-box pd-30 pt-10 height-100-p">
-								<h2 class="mb-30 h4">nouveau type</h2>
+								<h2 class="mb-30 h4">Nouveau typé</h2>
 								<section>
 									<form name="save" method="post">
 									<div class="row">
 										<div class="col-md-12">
 											<div class="form-group">
-												<label >type de conge</label>
+												<label >Type de congé</label>
 												<input name="leavetype" type="text" class="form-control" required="true" autocomplete="off">
 											</div>
 										</div>
@@ -108,7 +108,7 @@
 									<div class="row">
 										<div class="col-md-12">
 											<div class="form-group">
-												<label>date de debut</label>
+												<label>Date de début</label>
 												<input name="date_from" class="form-control" type="date">
 											</div>
 										</div>
@@ -124,7 +124,7 @@
 									
 									<div class="col-sm-12 text-right">
 										<div class="dropdown">
-										   <input class="btn btn-primary" type="submit" value="REGISTER" name="add" id="add">
+										   <input class="btn btn-primary" type="submit" value="ENREGISTRER" name="add" id="add">
 									    </div>
 									</div>
 								   </form>
@@ -139,7 +139,7 @@
 									<table class="data-table table stripe hover nowrap">
 										<thead>
 										<tr>
-											<th class="table-plus">type</th>
+											<th class="table-plus">Type</th>
 											<th class="table-plus">DESCRIPTION</th>
 											<th table-plus>DATE </th>
 											<th class="datatable-nosort">ACTION</th>

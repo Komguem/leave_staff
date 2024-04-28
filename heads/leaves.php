@@ -28,31 +28,31 @@
 				<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>Leave Portal</h4>
+								<h4>PORTAIL DE CONGÉ</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="admin_dashboard.php">Dashboard</a></li>
-									<li class="breadcrumb-item active" aria-current="page">All Leave</li>
+									<li class="breadcrumb-item"><a href="admin_dashboard.php">Tableau de bord</a></li>
+									<li class="breadcrumb-item active" aria-current="page">TOUS LES CONGÉS</li>
 								</ol>
 							</nav>
 						</div>
 				</div>
 			</div>
 
-			<div class="card-box mb-30">
+			<<div class="card-box mb-30">
 				<div class="pd-20">
-						<h2 class="text-blue h4">ALL LEAVE APPLICATIONS</h2>
+						<h2 class="text-blue h4">TOUS LES CONGÉS</h2>
 					</div>
 				<div class="pb-20">
 					<table class="data-table table stripe hover nowrap">
 						<thead>
 							<tr>
-								<th class="table-plus datatable-nosort">STAFF NAME</th>
-								<th>LEAVE TYPE</th>
-								<th>APPLIED DATE</th>
-								<th>HOD STATUS</th>
-								<th>REG. STATUS</th>
+								<th class="table-plus datatable-nosort">NOM</th>
+								<th>TYPE DE CONGÉ</th>
+								<th>DATE DE DEMANDE</th>
+								<th>STATUT CD</th>
+								<th>STATUT DRH</th>
 								<th class="datatable-nosort">ACTION</th>
 							</tr>
 						</thead>
@@ -81,21 +81,21 @@
 								<td><?php $stats=$row['Status'];
 	                             if($stats==1){
 	                              ?>
-	                                  <span style="color: green">Approved</span>
+	                                  <span style="color: green">Approuvé</span>
 	                                  <?php } if($stats==2)  { ?>
-	                                 <span style="color: red">Rejected</span>
+	                                 <span style="color: red">Rejeté</span>
 	                                  <?php } if($stats==0)  { ?>
-	                             <span style="color: blue">Pending</span>
+	                             <span style="color: blue">En attente</span>
 	                             <?php } ?>
 	                            </td>
 	                            <td><?php $stats=$row['admin_status'];
 	                             if($stats==1){
 	                              ?>
-	                                  <span style="color: green">Approved</span>
+	                                  <span style="color: green">Approuvé</span>
 	                                  <?php } if($stats==2)  { ?>
-	                                 <span style="color: red">Rejected</span>
+	                                 <span style="color: red">Rejeté</span>
 	                                  <?php } if($stats==0)  { ?>
-	                             <span style="color: blue">Pending</span>
+	                             <span style="color: blue">En attente</span>
 	                             <?php } ?>
 	                            </td>
 								<td>
@@ -104,8 +104,8 @@
 											<i class="dw dw-more"></i>
 										</a>
 										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<a class="dropdown-item" href="leave_details.php?leaveid=<?php echo $row['lid']; ?>"><i class="dw dw-eye"></i> View</a>
-											<a class="dropdown-item" href="admin_dashboard.php?leaveid=<?php echo $row['lid']; ?>"><i class="dw dw-delete-3"></i> Delete</a>
+										<a class="dropdown-item" href="leave_details.php?leaveid=<?php echo $row['lid']; ?>"><i class="dw dw-eye"></i> Voir</a>
+											<a class="dropdown-item" href="admin_dashboard.php?leaveid=<?php echo $row['lid']; ?>"><i class="dw dw-delete-3"></i> Supprimer</a>
 										</div>
 									</div>
 								</td>

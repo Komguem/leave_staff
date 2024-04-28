@@ -92,7 +92,7 @@ if(isset($_POST['signin']))
 				<div class="col-md-6 col-lg-5">
 					<div class="login-box bg-white box-shadow border-radius-10">
 						<div class="login-title">
-							<h2 class="text-center text-primary">BIENVENU A S2 BUISNESS INTELIGENCE</h2>
+							<h2 class="text-center text-primary">BIENVENUE CHEZ S2 BUSINESS INTELLIGENCE</h2>
 						</div>
 						<form name="signin" method="post">
 						
@@ -111,7 +111,7 @@ if(isset($_POST['signin']))
 							<div class="row pb-30">
 								
 								<div class="col-6">
-									<div class="forgot-password"><a href="forgot-password.html">Mot de passe</a></div>
+									<div class="forgot-password"><a href="change_password.php">Mot de passe oublié</a></div>
 								</div>
 							</div>
 							<div class="row">
@@ -127,6 +127,15 @@ if(isset($_POST['signin']))
 			</div>
 		</div>
 	</div>
+	
+				<li>
+					<div class="author-rights">
+						 
+						<p font-size="14px"  style="text-align: center; color: green;">@2024 Adrien Komguem.&copy; All rights reserved.</p>
+						
+					</div>
+					
+				</li>
 	<!-- js -->
 	<script src="vendors/scripts/core.js"></script>
 	<script src="vendors/scripts/script.min.js"></script>

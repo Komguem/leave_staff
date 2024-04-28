@@ -51,7 +51,7 @@ if (isset($_POST["update_image"])) {
 <body>
 	<div class="pre-loader">
 		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="../vendors/images/deskapp-logo-svg.png" alt=""></div>
+			<div class="loader-logo"><img src="../vendors/images/Image3.png" alt=""></div>
 			<div class='loader-progress' id="progress_div">
 				<div class='bar' id='bar1'></div>
 			</div>
@@ -83,7 +83,7 @@ if (isset($_POST["update_image"])) {
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="admin_dashboard">Dashboard</a></li>
+									<li class="breadcrumb-item"><a href="admin_dashboard">Tableau de bord</a></li>
 									<li class="breadcrumb-item active" aria-current="page">Profile</li>
 								</ol>
 							</nav>
@@ -109,13 +109,13 @@ if (isset($_POST["update_image"])) {
 													<div class="form-group">
 														<div class="custom-file">
 															<input name="image" id="file" type="file" class="custom-file-input" accept="image/*" onchange="validateImage('file')">
-															<label class="custom-file-label" for="file" id="selector">Choose file</label>		
+															<label class="custom-file-label" for="file" id="selector">Choisir le fichier</label>		
 														</div>
 													</div>
 												</div>
 												<div class="modal-footer">
 													<input type="submit" name="update_image" value="Update" class="btn btn-primary">
-													<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+													<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
 												</div>
 											</div>
 										</div>
@@ -125,18 +125,18 @@ if (isset($_POST["update_image"])) {
 							<h5 class="text-center h5 mb-0"><?php echo $row['FirstName']. " " .$row['LastName']; ?></h5>
 							<p class="text-center text-muted font-14"><?php echo $row['DepartmentName']; ?></p>
 							<div class="profile-info">
-								<h5 class="mb-20 h5 text-blue">Contact Information</h5>
+								<h5 class="mb-20 h5 text-blue">Informations</h5>
 								<ul>
 									<li>
-										<span>Email Address:</span>
+										<span>Email:</span>
 										<?php echo $row['EmailId']; ?>
 									</li>
 									<li>
-										<span>Phone Number:</span>
+										<span>Numéro:</span>
 										<?php echo $row['Phonenumber']; ?>
 									</li>
 									<li>
-										<span>My Role:</span>
+										<span>Role:</span>
 										<?php echo $row['role']; ?>
 									</li>
 									<li>
@@ -153,10 +153,10 @@ if (isset($_POST["update_image"])) {
 								<div class="tab height-100-p">
 									<ul class="nav nav-tabs customtab" role="tablist">
 										<li class="nav-item">
-											<a class="nav-link active" data-toggle="tab" href="#timeline" role="tab">Leave Records</a>
+											<a class="nav-link active" data-toggle="tab" href="#timeline" role="tab">Registre des congés</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" data-toggle="tab" href="#setting" role="tab">Settings</a>
+											<a class="nav-link" data-toggle="tab" href="#setting" role="tab">Paramètres</a>
 										</li>
 									</ul>
 									<div class="tab-content">
@@ -175,7 +175,7 @@ if (isset($_POST["update_image"])) {
 														<ul>
 															
 															<li>
-																<div class="date"><?php echo $row['num_days']; ?> Days</div>
+																<div class="date"><?php echo $row['num_days']; ?> Jours</div>
 																<div class="task-name"><i class="ion-ios-chatboxes"></i><?php echo $row['LeaveType']; ?></div>
 																<p><?php echo $row['Description']; ?></p>
 
@@ -183,11 +183,11 @@ if (isset($_POST["update_image"])) {
 																	<?php $stats=$row['Status'];
 								                                       if($stats==1){
 								                                        ?>
-								                                           <span style="color: green">Approved</span>
+								                                           <span style="color: green">Approuvé</span>
 								                                            <?php } if($stats==2)  { ?>
-								                                           <span style="color: red">Not Approved</span>
+								                                           <span style="color: red">Rejeté</span>
 								                                            <?php } if($stats==0)  { ?>
-									                                       <span style="color: blue">Pending</span>
+									                                       <span style="color: blue">En attente</span>
 									                                <?php } ?>
 																</div>
 
@@ -206,7 +206,7 @@ if (isset($_POST["update_image"])) {
 											<div class="profile-setting">
 												<form method="POST" enctype="multipart/form-data">
 													<div class="profile-edit-list row">
-														<div class="col-md-12"><h4 class="text-blue h5 mb-20">Edit Your Personal Setting</h4></div>
+														<div class="col-md-12"><h4 class="text-blue h5 mb-20">Modifier vos paramètres personnels</h4></div>
 
 														<?php
 														$query = mysqli_query($conn,"select * from tblemployees where emp_id = '$session_id' ")or die(mysqli_error());
@@ -214,41 +214,41 @@ if (isset($_POST["update_image"])) {
 														?>
 														<div class="weight-500 col-md-6">
 															<div class="form-group">
-																<label>First Name</label>
+																<label>Nom</label>
 																<input name="fname" class="form-control form-control-lg" type="text" required="true" autocomplete="off" value="<?php echo $row['FirstName']; ?>">
 															</div>
 														</div>
 														<div class="weight-500 col-md-6">
 															<div class="form-group">
-																<label>Last Name</label>
+																<label>Prenom</label>
 																<input name="lastname" class="form-control form-control-lg" type="text" placeholder="" required="true" autocomplete="off" value="<?php echo $row['LastName']; ?>">
 															</div>
 														</div>
 														<div class="weight-500 col-md-6">
 															<div class="form-group">
-																<label>Email Address</label>
+																<label>Email</label>
 																<input name="email" class="form-control form-control-lg" type="text" placeholder="" required="true" autocomplete="off" value="<?php echo $row['EmailId']; ?>">
 															</div>
 														</div>
 														<div class="weight-500 col-md-6">
 															<div class="form-group">
-																<label>Phone Number</label>
+																<label>Numéro</label>
 																<input name="phonenumber" class="form-control form-control-lg" type="text" placeholder="" required="true" autocomplete="off" value="<?php echo $row['Phonenumber']; ?>">
 															</div>
 														</div>
 														<div class="weight-500 col-md-6">
 															<div class="form-group">
-																<label>Date Of Birth</label>
+																<label>Date de naissance</label>
 																<input name="dob" class="form-control form-control-lg date-picker" type="text" placeholder="" required="true" autocomplete="off" value="<?php echo $row['Dob']; ?>">
 															</div>
 														</div>
 														<div class="weight-500 col-md-6">
 															<div class="form-group">
-																<label>Gender</label>
+																<label>Genre</label>
 																<select name="gender" class="custom-select form-control" required="true" autocomplete="off">
 																<option value="<?php echo $row['Gender']; ?>"><?php echo $row['Gender']; ?></option>
-																	<option value="male">Male</option>
-																	<option value="female">Female</option>
+																	<option value="male">Homme</option>
+																	<option value="female">Femme</option>
 																</select>
 															</div>
 														</div>
@@ -261,7 +261,7 @@ if (isset($_POST["update_image"])) {
 														</div>
 														<div class="weight-500 col-md-6">
 															<div class="form-group">
-																<label>Department</label>
+																<label>Département</label>
 																<select name="department" class="custom-select form-control" required="true" autocomplete="off">
 																	<?php
 																		$query_staff = mysqli_query($conn,"select * from tblemployees join  tbldepartments where emp_id = '$session_id'")or die(mysqli_error());
@@ -285,7 +285,7 @@ if (isset($_POST["update_image"])) {
 																$row = mysqli_fetch_array($query);
 															?>
 															<div class="form-group">
-																<label>Available Leave Days</label>
+																<label>Jours de congé disponibles</label>
 																<input class="form-control form-control-lg" type="text" required="true" autocomplete="off" readonly value="<?php echo $row['Av_leave']; ?>">
 															</div>
 														</div>
@@ -293,7 +293,7 @@ if (isset($_POST["update_image"])) {
 															<div class="form-group">
 																<label></label>
 																<div class="modal-footer justify-content-center">
-																	<button class="btn btn-primary" name="new_update" id="new_update" data-toggle="modal">Save & &nbsp;Update</button>
+																	<button class="btn btn-primary" name="new_update" id="new_update" data-toggle="modal">Enregistrer & &nbsp; Mettre à jour</button>
 																</div>
 															</div>
 														</div>

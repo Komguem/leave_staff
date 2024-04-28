@@ -1,61 +1,76 @@
-<?php include('includes/header.php')?>
-<?php include('../includes/session.php')?>
 <?php
-	if(isset($_POST['apply']))
-	{
-	$empid=$session_id;
-	$leave_type=$_POST['leave_type'];
-	$fromdate=date('d-m-Y', strtotime($_POST['date_from']));
-	$todate=date('d-m-Y', strtotime($_POST['date_to']));
-	$description=$_POST['description'];  
-	$status=0;
-	$isread=0;
-	$leave_days=$_POST['leave_days'];
-	$datePosting = date("Y-m-d");
+include('includes/header.php');
+include('../includes/session.php');
 
-	if($fromdate > $todate)
+if(isset($_POST['apply'])) {
+    $empid = $session_id;
+    $leave_type = $_POST['leave_type'];
+    $fromdate = date('d-m-Y', strtotime($_POST['date_from']));
+    $todate = date('d-m-Y', strtotime($_POST['date_to']));
+    $description = $_POST['description'];  
+    $status = 0;
+    $isread = 0;
+    $leave_days = $_POST['leave_days'];
+    $datePosting = date("Y-m-d");
+
+    // Vérification si la date de départ est antérieure à la date actuelle
+    if(strtotime($fromdate) < strtotime(date('Y-m-d'))) {
+        echo "<script>alert('La date de départ ne peut pas être antérieure à la date actuelle.');</script>";
+    }
+    elseif($fromdate > $todate) {
+        echo "<script>alert('La date de fin doit être postérieure à la date de départ.');</script>";
+    }
+    elseif($leave_days <= 0) {
+        echo "<script>alert('VOUS AVEZ DÉPASSÉ VOTRE LIMITE DE CONGÉ. LA DEMANDE DE CONGÉ A ÉCHOUÉ');</script>";
+    }
+    else {
+        // Le reste de votre code d'insertion de données dans la base de données
+		
+			$DF = date_create($_POST['date_from']);
+			$DT = date_create($_POST['date_to']);
+	
+			$diff =  date_diff($DF , $DT );
+			$num_days = (1 + $diff->format("%a"));
+	
+			$sql="INSERT INTO tblleaves(LeaveType,ToDate,FromDate,Description,Status,IsRead,empid,num_days,PostingDate) VALUES(:leave_type,:fromdate,:todate,:description,:status,:isread,:empid,:num_days,:datePosting)";
+			$query = $dbh->prepare($sql);
+			$query->bindParam(':leave_type',$leave_type,PDO::PARAM_STR);
+			$query->bindParam(':fromdate',$fromdate,PDO::PARAM_STR);
+			$query->bindParam(':todate',$todate,PDO::PARAM_STR);
+			$query->bindParam(':description',$description,PDO::PARAM_STR);
+			$query->bindParam(':status',$status,PDO::PARAM_STR);
+			$query->bindParam(':isread',$isread,PDO::PARAM_STR);
+			$query->bindParam(':empid',$empid,PDO::PARAM_STR);
+			$query->bindParam(':num_days',$num_days,PDO::PARAM_STR);
+			$query->bindParam(':datePosting',$datePosting,PDO::PARAM_STR);
+			$query->execute();
+			$lastInsertId = $dbh->lastInsertId();
+			if($lastInsertId)
+			{
+				echo "<script>alert('Leave Application was successful.');</script>";
+				echo "<script type='text/javascript'> document.location = 'leave_history.php'; </script>";
+			}
+			else 
+			{
+				echo "<script>alert('Something went wrong. Please try again');</script>";
+			}
+	
+		
+    }
+}
+
+	/*if($fromdate > $todate)
 	{
 	    echo "<script>alert('End Date should be greater than Start Date');</script>";
 	  }
 	elseif($leave_days <= 0)
 	{
 	    echo "<script>alert('YOU HAVE EXCEEDED YOUR LEAVE LIMIT. LEAVE APPLICATION FAILED');</script>";
-	  }
+	  }*/
 
-	else {
-		
-		$DF = date_create($_POST['date_from']);
-		$DT = date_create($_POST['date_to']);
+	
 
-		$diff =  date_diff($DF , $DT );
-		$num_days = (1 + $diff->format("%a"));
 
-		$sql="INSERT INTO tblleaves(LeaveType,ToDate,FromDate,Description,Status,IsRead,empid,num_days,PostingDate) VALUES(:leave_type,:fromdate,:todate,:description,:status,:isread,:empid,:num_days,:datePosting)";
-		$query = $dbh->prepare($sql);
-		$query->bindParam(':leave_type',$leave_type,PDO::PARAM_STR);
-		$query->bindParam(':fromdate',$fromdate,PDO::PARAM_STR);
-		$query->bindParam(':todate',$todate,PDO::PARAM_STR);
-		$query->bindParam(':description',$description,PDO::PARAM_STR);
-		$query->bindParam(':status',$status,PDO::PARAM_STR);
-		$query->bindParam(':isread',$isread,PDO::PARAM_STR);
-		$query->bindParam(':empid',$empid,PDO::PARAM_STR);
-		$query->bindParam(':num_days',$num_days,PDO::PARAM_STR);
-		$query->bindParam(':datePosting',$datePosting,PDO::PARAM_STR);
-		$query->execute();
-		$lastInsertId = $dbh->lastInsertId();
-		if($lastInsertId)
-		{
-			echo "<script>alert('Leave Application was successful.');</script>";
-			echo "<script type='text/javascript'> document.location = 'leave_history.php'; </script>";
-		}
-		else 
-		{
-			echo "<script>alert('Something went wrong. Please try again');</script>";
-		}
-
-	}
-
-}
 
 ?>
 
@@ -193,7 +208,7 @@
 										<div class="form-group">
 											<label style="font-size:16px;"><b></b></label>
 											<div class="modal-footer justify-content-center">
-												<button class="btn btn-primary" name="apply" id="apply" data-toggle="modal">demande&nbsp;Leave</button>
+												<button class="btn btn-primary" name="apply" id="apply" data-toggle="modal">Demander&nbsp;Congé</button>
 											</div>
 										</div>
 									</div>

@@ -36,14 +36,14 @@
 						?>
 
 						<h4 class="font-20 weight-500 mb-10 text-capitalize">
-							bienvenu <div class="weight-600 font-30 text-blue"><?php echo $row['FirstName']. " " .$row['LastName']; ?>,</div>
+							bienvenue <div class="weight-600 font-30 text-blue"><?php echo $row['FirstName']. " " .$row['LastName']; ?>,</div>
 						</h4>
 						<p class="font-18 max-width-600">S2 Business Intelligence</p>
 					</div>
 				</div>
 			</div>
 			<div class="title pb-20">
-				<h2 class="h3 mb-0">Data Information</h2>
+				<h2 class="h3 mb-0">Informations sur les données</h2>
 			</div>
 			<div class="row pb-10">
 				<div class="col-xl-3 col-lg-3 col-md-6 mb-20">
@@ -60,7 +60,7 @@
 						<div class="d-flex flex-wrap">
 							<div class="widget-data">
 								<div class="weight-700 font-24 text-dark"><?php echo($empcount);?></div>
-								<div class="font-14 text-secondary weight-500">nombre employe</div>
+								<div class="font-14 text-secondary weight-500">Nombre d'employé</div>
 							</div>
 							<div class="widget-icon">
 								<div class="icon" data-color="#00eccf"><i class="icon-copy dw dw-user-2"></i></div>
@@ -84,7 +84,7 @@
 						<div class="d-flex flex-wrap">
 							<div class="widget-data">
 								<div class="weight-700 font-24 text-dark"><?php echo htmlentities($leavecount); ?></div>
-								<div class="font-14 text-secondary weight-500">conge accepte</div>
+								<div class="font-14 text-secondary weight-500">Congé accepté</div>
 							</div>
 							<div class="widget-icon">
 								<div class="icon" data-color="#09cc06"><span class="icon-copy fa fa-hourglass"></span></div>
@@ -108,7 +108,7 @@
 						<div class="d-flex flex-wrap">
 							<div class="widget-data">
 								<div class="weight-700 font-24 text-dark"><?php echo($leavecount); ?></div>
-								<div class="font-14 text-secondary weight-500">en attente</div>
+								<div class="font-14 text-secondary weight-500">En attente</div>
 							</div>
 							<div class="widget-icon">
 								<div class="icon"><i class="icon-copy fa fa-hourglass-end" aria-hidden="true"></i></div>
@@ -132,7 +132,7 @@
 						<div class="d-flex flex-wrap">
 							<div class="widget-data">
 								<div class="weight-700 font-24 text-dark"><?php echo($leavecount); ?></div>
-								<div class="font-14 text-secondary weight-500">Refuse</div>
+								<div class="font-14 text-secondary weight-500">Refusé</div>
 							</div>
 							<div class="widget-icon">
 								<div class="icon" data-color="#ff5b5b"><i class="icon-copy fa fa-hourglass-o" aria-hidden="true"></i></div>
@@ -146,7 +146,7 @@
 				<div class="col-lg-4 col-md-6 mb-20">
 					<div class="card-box height-100-p pd-20 min-height-200px">
 						<div class="d-flex justify-content-between pb-10">
-							<div class="h5 mb-0">chef Department</div>
+							<div class="h5 mb-0">Chef Déparetment</div>
 							<div class="table-actions">
 								<a title="VIEW" href="staff.php"><i class="icon-copy ion-disc" data-color="#17a2b8"></i></a>	
 							</div>
@@ -180,7 +180,7 @@
 				<div class="col-lg-4 col-md-6 mb-20">
 					<div class="card-box height-100-p pd-20 min-height-200px">
 						<div class="d-flex justify-content-between">
-							<div class="h5 mb-0">Application Setup</div>
+							<div class="h5 mb-0">Configuration de l'application</div>
 							<div class="table-actions">
 								<a title="VIEW" href="staff.php"><i class="icon-copy ion-disc" data-color="#17a2b8"></i></a>	
 							</div>
@@ -192,7 +192,7 @@
 				<div class="col-lg-4 col-md-6 mb-20">
 					<div class="card-box height-100-p pd-20 min-height-200px">
 						<div class="d-flex justify-content-between">
-							<div class="h5 mb-0">employé</div>
+							<div class="h5 mb-0">Employé</div>
 							<div class="table-actions">
 								<a title="VIEW" href="staff.php"><i class="icon-copy ion-disc" data-color="#17a2b8"></i></a>	
 							</div>
@@ -228,16 +228,16 @@
 
 			<div class="card-box mb-30">
 				<div class="pd-20">
-						<h2 class="text-blue h4">derniere demande</h2>
+						<h2 class="text-blue h4">Derniere demande</h2>
 					</div>
 				<div class="pb-20">
 					<table class="data-table table stripe hover nowrap">
 						<thead>
 							<tr>
-								<th class="table-plus datatable-nosort">nom de l'employe</th>
-								<th>type de conge</th>
-								<th>date</th>
-								<th>STATUS</th>
+								<th class="table-plus datatable-nosort">Nom de l'employé</th>
+								<th>Type de congé</th>
+								<th>Date</th>
+								<th>Status</th>
 								<th class="datatable-nosort">ACTION</th>
 							</tr>
 						</thead>
@@ -270,11 +270,11 @@
 								<td><?php $stats=$result->Status;
 	                             if($stats==1){
 	                              ?>
-	                                  <span style="color: green">Accepte</span>
+	                                  <span style="color: green">Accepté</span>
 	                                  <?php } if($stats==2)  { ?>
-	                                 <span style="color: red">Refuse</span>
+	                                 <span style="color: red">Refusé</span>
 	                                  <?php } if($stats==0)  { ?>
-	                             <span style="color: blue">en attente</span>
+	                             <span style="color: blue">En attenté</span>
 	                             <?php } ?>
 	                            </td>
 								<td>

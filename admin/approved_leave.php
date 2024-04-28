@@ -3,7 +3,7 @@
 <body>
 	<div class="pre-loader">
 		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="../vendors/images/Logo.png" alt=""></div>
+			<div class="loader-logo"><img src="../vendors/images/Image3.png" alt=""></div>
 			<div class='loader-progress' id="progress_div">
 				<div class='bar' id='bar1'></div>
 			</div>
@@ -28,12 +28,12 @@
 				<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>Leave Portal</h4>
+								<h4>Portail des Congés</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="admin_dashboard.php">Dashboard</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Approved Leave</li>
+									<li class="breadcrumb-item"><a href="admin_dashboard.php">Tableau de bord</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Congés approuvés</li>
 								</ol>
 							</nav>
 						</div>
@@ -42,17 +42,17 @@
 
 			<div class="card-box mb-30">
 				<div class="pd-20">
-						<h2 class="text-blue h4">APPROVED LEAVE</h2>
+						<h2 class="text-blue h4">Congés approuvés</h2>
 					</div>
 				<div class="pb-20">
 					<table class="data-table table stripe hover nowrap">
 						<thead>
 							<tr>
-								<th class="table-plus datatable-nosort">STAFF NAME</th>
-								<th>LEAVE TYPE</th>
-								<th>APPLIED DATE</th>
-								<th>HOD STATUS</th>
-								<th>REG. STATUS</th>
+								<th class="table-plus datatable-nosort">NOM DU PERSONNEL</th>
+								<th>TYPE DE CONGÉ</th>
+								<th>DATE de DEMANDE</th>
+								<th>Avis CD</th>
+								<th>STATUT RH</th>
 								<th class="datatable-nosort">ACTION</th>
 							</tr>
 						</thead>
@@ -82,21 +82,21 @@
 								<td><?php $stats=$row['Status'];
 	                             if($stats==1){
 	                              ?>
-	                                  <span style="color: green">Approved</span>
+	                                  <span style="color: green">Accepté</span>
 	                                  <?php } if($stats==2)  { ?>
-	                                 <span style="color: red">Rejected</span>
+	                                 <span style="color: red">Refusé</span>
 	                                  <?php } if($stats==0)  { ?>
-	                             <span style="color: blue">Pending</span>
+	                             <span style="color: blue">En attente</span>
 	                             <?php } ?>
 	                            </td>
 	                            <td><?php $stats=$row['admin_status'];
 	                             if($stats==1){
 	                              ?>
-	                                  <span style="color: green">Approved</span>
+	                                  <span style="color: green">Accepté</span>
 	                                  <?php } if($stats==2)  { ?>
-	                                 <span style="color: red">Rejected</span>
+	                                 <span style="color: red">Refusé</span>
 	                                  <?php } if($stats==0)  { ?>
-	                             <span style="color: blue">Pending</span>
+	                             <span style="color: blue">En attente</span>
 	                             <?php } ?>
 	                            </td>
 								<td>

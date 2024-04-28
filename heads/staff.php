@@ -39,7 +39,7 @@ if (isset($_GET['delete'])) {
 	<div class="main-container">
 		<div class="pd-ltr-20">
 			<div class="title pb-20">
-				<h2 class="h3 mb-0">Administrative Breakdown</h2>
+				<h2 class="h3 mb-0">Administration </h2>
 			</div>
 			<div class="row pb-10">
 				<div class="col-xl-3 col-lg-3 col-md-6 mb-20">
@@ -56,7 +56,7 @@ if (isset($_GET['delete'])) {
 						<div class="d-flex flex-wrap">
 							<div class="widget-data">
 								<div class="weight-700 font-24 text-dark"><?php echo($empcount);?></div>
-								<div class="font-14 text-secondary weight-500">Total Employees</div>
+								<div class="font-14 text-secondary weight-500">Total Employés</div>
 							</div>
 							<div class="widget-icon">
 								<div class="icon" data-color="#00eccf"><i class="icon-copy dw dw-user-2"></i></div>
@@ -75,7 +75,7 @@ if (isset($_GET['delete'])) {
 						<div class="d-flex flex-wrap">
 							<div class="widget-data">
 								<div class="weight-700 font-24 text-dark"><?php echo htmlentities($count_reg_staff); ?></div>
-								<div class="font-14 text-secondary weight-500">Staffs</div>
+								<div class="font-14 text-secondary weight-500">Employé</div>
 							</div>
 							<div class="widget-icon">
 								<div class="icon" data-color="#09cc06"><span class="icon-copy fa fa-hourglass"></span></div>
@@ -94,7 +94,7 @@ if (isset($_GET['delete'])) {
 						<div class="d-flex flex-wrap">
 							<div class="widget-data">
 								<div class="weight-700 font-24 text-dark"><?php echo($count_reg_hod); ?></div>
-								<div class="font-14 text-secondary weight-500">Department Heads</div>
+								<div class="font-14 text-secondary weight-500"> Chef de Département </div>
 							</div>
 							<div class="widget-icon">
 								<div class="icon"><i class="icon-copy fa fa-hourglass-end" aria-hidden="true"></i></div>
@@ -113,7 +113,7 @@ if (isset($_GET['delete'])) {
 						<div class="d-flex flex-wrap">
 							<div class="widget-data">
 								<div class="weight-700 font-24 text-dark"><?php echo($count_reg_admin); ?></div>
-								<div class="font-14 text-secondary weight-500">Administrators</div>
+								<div class="font-14 text-secondary weight-500">Administrateur </div>
 							</div>
 							<div class="widget-icon">
 								<div class="icon" data-color="#ff5b5b"><i class="icon-copy fa fa-hourglass-o" aria-hidden="true"></i></div>
@@ -125,17 +125,17 @@ if (isset($_GET['delete'])) {
 
 			<div class="card-box mb-30">
 				<div class="pd-20">
-						<h2 class="text-blue h4">ALL EMPLOYEES</h2>
+						<h2 class="text-blue h4">Tous les Employés</h2>
 					</div>
 				<div class="pb-20">
 					<table class="data-table table stripe hover nowrap">
 						<thead>
 							<tr>
-								<th class="table-plus">FULL NAME</th>
+								<th class="table-plus">NOM</th>
 								<th>EMAIL</th>
-								<th>PHONE NUMBER</th>
-								<th>POSITION</th>
-								<th>AVE. LEAVE</th>
+								<th>DEPARTEMENT</th>
+								<th>ROLE</th>
+								<th>CONGÉ</th>
 								<th class="datatable-nosort">ACTION</th>
 							</tr>
 						</thead>
@@ -143,7 +143,7 @@ if (isset($_GET['delete'])) {
 							<tr>
 
 								 <?php
-		                         $teacher_query = mysqli_query($conn,"select * from tblemployees LEFT JOIN tbldepartments ON tblemployees.Department = tbldepartments.DepartmentShortName where tblemployees.role = 'Staff' and tblemployees.Department = '$session_depart' ORDER BY tblemployees.emp_id") or die(mysqli_error());
+		                         $teacher_query = mysqli_query($conn,"select * from tblemployees LEFT JOIN tbldepartments ON tblemployees.Department = tbldepartments.DepartmentShortName where role != 'Admin' ORDER BY tblemployees.emp_id") or die(mysqli_error());
 		                         while ($row = mysqli_fetch_array($teacher_query)) {
 		                         $id = $row['emp_id'];
 		                             ?>
@@ -159,7 +159,7 @@ if (isset($_GET['delete'])) {
 									</div>
 								</td>
 								<td><?php echo $row['EmailId']; ?></td>
-	                            <td><?php echo $row['Phonenumber']; ?></td>
+	                            <td><?php echo $row['DepartmentName']; ?></td>
 								<td><?php echo $row['role']; ?></td>
 								<td><?php echo $row['Av_leave']; ?></td>
 								<td>
@@ -180,7 +180,7 @@ if (isset($_GET['delete'])) {
 			   </div>
 			</div>
 
-			<?php include('includes/footer.php'); ?>
+			
 		</div>
 	</div>
 	<!-- js -->

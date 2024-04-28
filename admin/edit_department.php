@@ -33,7 +33,7 @@
 <body>
 	<div class="pre-loader">
 		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="../vendors/images/Logo.png" alt=""></div>
+			<div class="loader-logo"><img src="../vendors/images/Image3.png" alt=""></div>
 			<div class='loader-progress' id="progress_div">
 				<div class='bar' id='bar1'></div>
 			</div>
@@ -59,12 +59,12 @@
 						<div class="row">
 							<div class="col-md-6 col-sm-12">
 								<div class="title">
-									<h4>Department List</h4>
+									<h4>Liste Département</h4>
 								</div>
 								<nav aria-label="breadcrumb" role="navigation">
 									<ol class="breadcrumb">
-										<li class="breadcrumb-item"><a href="admin_dashboard.php">Dashboard</a></li>
-										<li class="breadcrumb-item active" aria-current="page">Modifier Department</li>
+										<li class="breadcrumb-item"><a href="admin_dashboard.php">Tableau de bord</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Modifier Département</li>
 									</ol>
 								</nav>
 							</div>
@@ -74,7 +74,7 @@
 					<div class="row">
 						<div class="col-lg-4 col-md-6 col-sm-12 mb-30">
 							<div class="card-box pd-30 pt-10 height-100-p">
-								<h2 class="mb-30 h4">modifier Department</h2>
+								<h2 class="mb-30 h4">Modifier Département</h2>
 								<section>
 									<?php
 									$query = mysqli_query($conn,"SELECT * from tbldepartments where id = '$get_id'")or die(mysqli_error());
@@ -85,7 +85,7 @@
 									<div class="row">
 										<div class="col-md-12">
 											<div class="form-group">
-												<label >Nom Department </label>
+												<label >Nom Département </label>
 												<input name="departmentname" type="text" class="form-control" required="true" autocomplete="off" value="<?php echo $row['DepartmentName']; ?>">
 											</div>
 										</div>
@@ -93,7 +93,7 @@
 									<div class="row">
 										<div class="col-md-12">
 											<div class="form-group">
-												<label>abreviation</label>
+												<label>Abréviation</label>
 												<input name="departmentshortname" type="text" class="form-control" required="true" autocomplete="off" style="text-transform:uppercase" value="<?php echo $row['DepartmentShortName']; ?>">
 											</div>
 										</div>
@@ -110,14 +110,14 @@
 						
 						<div class="col-lg-8 col-md-6 col-sm-12 mb-30">
 							<div class="card-box pd-30 pt-10 height-100-p">
-								<h2 class="mb-30 h4">Liste Department </h2>
+								<h2 class="mb-30 h4">Liste Département </h2>
 								<div class="pb-20">
 									<table class="data-table table stripe hover nowrap">
 										<thead>
 										<tr>
 											<th>SR NO.</th>
-											<th class="table-plus">DEPARTEMENT</th>
-											<th>Abreviation</th>
+											<th class="table-plus">Département</th>
+											<th>Abréviation</th>
 											<th class="datatable-nosort">ACTION</th>
 										</tr>
 										</thead>

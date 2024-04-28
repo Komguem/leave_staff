@@ -20,10 +20,10 @@
 					</li>
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
-							<span class="micon dw dw-apartment"></span><span class="mtext"> conge </span>
+							<span class="micon dw dw-apartment"></span><span class="mtext"> Congé </span>
 						</a>
 						<ul class="submenu">
-							<li><a href="apply_leave.php" >demander un conge</a></li>
+							<li><a href="apply_leave.php" >Demander un congé</a></li>
 							<li><a href="leave_history.php" l >Historique</a></li>
 						</ul>
 					</li>
@@ -42,17 +42,7 @@
 					</div>
 					</li>
 
-					<li>
-						<div class="dropdown-divider" ></div>
-					</li>
-					<li>
-						<div class="author-rights">
-						 
-						<p font-size="14px" te>@2024 Adrien Komguem.All rights reserved.</p>
-						
-					</div>
-					
-				</li>
+	
 				</ul>
 			</div>
 		</div>

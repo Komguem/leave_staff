@@ -41,7 +41,7 @@
 							<span class="micon dw dw-apartment"></span><span class="mtext">Congé </span>
 						</a>
 						<ul class="submenu">
-							<li><a href="apply_leave.php">Congés</a></li>
+							<!--<li><a href="apply_leave.php">Congés</a></li>-->
 							<li><a href="leaves.php">Tous les congés</a></li>
 							<li><a href="pending_leave.php">En attente</a></li>
 							<li><a href="approved_leave.php">Accepté</a></li>

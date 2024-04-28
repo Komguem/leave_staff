@@ -139,7 +139,7 @@ if (isset($_GET['delete'])) {
 								<th>Date de retour</th>
 								<th>Nombre de jours</th>
 								<th>Chef de département></th>
-								<th>REG. STATUS</th>
+								<th>DRH</th>
 								<th class="datatable-nosort">ACTION</th>
 							</tr>
 						</thead>

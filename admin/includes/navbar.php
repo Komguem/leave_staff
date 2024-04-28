@@ -28,7 +28,7 @@
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 						<a class="dropdown-item" href="my_profile.php"><i class="dw dw-user1"></i> Profile</a>
-						<a class="dropdown-item" href="change_password.php"><i class="dw dw-help"></i> changer le mot de passe</a>
+						<a class="dropdown-item" href="changepass.php"><i class="dw dw-help"></i> changer le mot de passe</a>
 						<a class="dropdown-item" href="../logout.php"><i class="dw dw-logout"></i> Log Out</a>
 					</div>
 				</div>

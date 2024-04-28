@@ -60,12 +60,12 @@
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>Staff Portal</h4>
+								<h4>Portail du personnel</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Staff Edit</li>
+									<li class="breadcrumb-item"><a href="index.html">Tableau de bord</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Modifier le personnel</li>
 								</ol>
 							</nav>
 						</div>
@@ -75,7 +75,7 @@
 				<div class="pd-20 card-box mb-30">
 					<div class="clearfix">
 						<div class="pull-left">
-							<h4 class="text-blue h4">Edit Staff</h4>
+							<h4 class="text-blue h4">Modifier le personnel</h4>
 							<p class="mb-20"></p>
 						</div>
 					</div>
@@ -90,19 +90,19 @@
 								<div class="row">
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label >First Name :</label>
+											<label >Nom :</label>
 											<input name="firstname" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="<?php echo $row['FirstName']; ?>">
 										</div>
 									</div>
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label >Last Name :</label>
+											<label >Prenom :</label>
 											<input name="lastname" type="text" class="form-control" required="true" autocomplete="off" value="<?php echo $row['LastName']; ?>">
 										</div>
 									</div>
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Email Address :</label>
+											<label>Email:</label>
 											<input name="email" type="email" class="form-control" required="true" autocomplete="off" value="<?php echo $row['EmailId']; ?>">
 										</div>
 									</div>
@@ -110,13 +110,13 @@
 								<div class="row">
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Password :</label>
+											<label>Mot de passe :</label>
 											<input name="password" type="password" placeholder="**********" class="form-control" readonly required="true" autocomplete="off" value="<?php echo $row['Password']; ?>">
 										</div>
 									</div>
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Gender :</label>
+											<label>Genre :</label>
 											<select name="gender" class="custom-select form-control" required="true" autocomplete="off">
 												<option value="<?php echo $row['Gender']; ?>"><?php echo $row['Gender']; ?></option>
 												<option value="male">Male</option>
@@ -126,7 +126,7 @@
 									</div>
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Phone Number :</label>
+											<label>Numéro:</label>
 											<input name="phonenumber" type="text" class="form-control" required="true" autocomplete="off"value="<?php echo $row['Phonenumber']; ?>">
 										</div>
 									</div>
@@ -134,19 +134,19 @@
 								<div class="row">
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Date Of Birth :</label>
+											<label>Date de naissance :</label>
 											<input name="dob" type="text" class="form-control date-picker" required="true" autocomplete="off"value="<?php echo $row['Dob']; ?>">
 										</div>
 									</div>
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Address :</label>
+											<label>Addresse :</label>
 											<input name="address" type="text" class="form-control" required="true" autocomplete="off"value="<?php echo $row['Address']; ?>">
 										</div>
 									</div>
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Department :</label>
+											<label>Département :</label>
 											<select name="department" class="custom-select form-control" required="true" autocomplete="off">
 												<?php
 													$query_staff = mysqli_query($conn,"select * from tblemployees join  tbldepartments where emp_id = '$get_id'")or die(mysqli_error());
@@ -155,7 +155,7 @@
 												 ?>
 												<option value="<?php echo $row_staff['DepartmentShortName']; ?>"><?php echo $row_staff['DepartmentName']; ?></option>
 													<?php
-													$query = mysqli_query($conn,"select * from tbldepartments where DepartmentShortName = '$session_depart'");
+													$query = mysqli_query($conn,"select * from tbldepartments");
 													while($row = mysqli_fetch_array($query)){
 													
 													?>
@@ -173,19 +173,19 @@
 								<div class="row">
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Staff Leave Days :</label>
+											<label>Jours de congé du personnel :</label>
 											<input name="leave_days" type="text" class="form-control" required="true" autocomplete="off"value="<?php echo $new_row['Av_leave']; ?>">
 										</div>
 									</div>
 									
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>User Role :</label>
+											<label>Rôle de l'utilisateur :</label>
 											<select name="user_role" class="custom-select form-control" required="true" autocomplete="off">
 												<option value="<?php echo $new_row['role']; ?>"><?php echo $new_row['role']; ?></option>
 												<option value="Admin">Admin</option>
-												<option value="HOD">HOD</option>
-												<option value="Staff">Staff</option>
+												<option value="HOD">CD</option>
+												<option value="Staff">Personnel</option>
 											</select>
 										</div>
 									</div>
@@ -194,7 +194,7 @@
 										<div class="form-group">
 											<label style="font-size:16px;"><b></b></label>
 											<div class="modal-footer justify-content-center">
-												<button class="btn btn-primary" name="add_staff" id="add_staff" data-toggle="modal">Update&nbsp;Staff</button>
+												<button class="btn btn-primary" name="add_staff" id="add_staff" data-toggle="modal">Mise à jour &nbsp;du personnel</button>
 											</div>
 										</div>
 									</div>

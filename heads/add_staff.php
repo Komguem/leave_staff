@@ -68,12 +68,12 @@
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>Staff Portal</h4>
+								<h4>Portail des employés</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Staff Module</li>
+									<li class="breadcrumb-item active" aria-current="page">Module des employés</li>
 								</ol>
 							</nav>
 						</div>
@@ -83,7 +83,7 @@
 				<div class="pd-20 card-box mb-30">
 					<div class="clearfix">
 						<div class="pull-left">
-							<h4 class="text-blue h4">Staff Form</h4>
+							<h4 class="text-blue h4">Formulaire</h4>
 							<p class="mb-20"></p>
 						</div>
 					</div>
@@ -93,19 +93,19 @@
 								<div class="row">
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label >First Name :</label>
+											<label >Nom:</label>
 											<input name="firstname" type="text" class="form-control wizard-required" required="true" autocomplete="off">
 										</div>
 									</div>
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label >Last Name :</label>
+											<label >Prenom :</label>
 											<input name="lastname" type="text" class="form-control" required="true" autocomplete="off">
 										</div>
 									</div>
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Email Address :</label>
+											<label>Email :</label>
 											<input name="email" type="email" class="form-control" required="true" autocomplete="off">
 										</div>
 									</div>
@@ -113,23 +113,23 @@
 								<div class="row">
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Password :</label>
+											<label>Mot de passe:</label>
 											<input name="password" type="password" placeholder="**********" class="form-control" required="true" autocomplete="off">
 										</div>
 									</div>
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Gender :</label>
+											<label>Genre :</label>
 											<select name="gender" class="custom-select form-control" required="true" autocomplete="off">
-												<option value="">Select Gender</option>
-												<option value="male">Male</option>
-												<option value="female">Female</option>
+												<option value="">Selection</option>
+												<option value="male">Homme</option>
+												<option value="female">Femme</option>
 											</select>
 										</div>
 									</div>
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Phone Number :</label>
+											<label>Numero :</label>
 											<input name="phonenumber" type="text" class="form-control" required="true" autocomplete="off">
 										</div>
 									</div>
@@ -137,7 +137,7 @@
 								<div class="row">
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Date Of Birth :</label>
+											<label>Date de naissance :</label>
 											<input name="dob" type="text" class="form-control date-picker" required="true" autocomplete="off">
 										</div>
 									</div>
@@ -149,11 +149,11 @@
 									</div>
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Department :</label>
+											<label>Département :</label>
 											<select name="department" class="custom-select form-control" required="true" autocomplete="off">
-												<option value="">Select Department</option>
+												<option value="">Sélectionner un Département</option>
 													<?php
-													$query = mysqli_query($conn,"select * from tbldepartments where DepartmentShortName = '$session_depart'");
+													$query = mysqli_query($conn,"select * from tbldepartments");
 													while($row = mysqli_fetch_array($query)){
 													
 													?>
@@ -167,19 +167,19 @@
 								<div class="row">
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>Staff Leave Days :</label>
+											<label>Nombre de jours de conge :</label>
 											<input name="leave_days" type="number" class="form-control" required="true" autocomplete="off">
 										</div>
 									</div>
 									
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
-											<label>User Role :</label>
+											<label>Categorie :</label>
 											<select name="user_role" class="custom-select form-control" required="true" autocomplete="off">
-												<option value="">Select Role</option>
-												<option value="Admin">Admin</option>
-												<option value="HOD">HOD</option>
-												<option value="Staff">Staff</option>
+												<option value="">Selection</option>
+												<option value="Admin">Administrateur</option>
+												<option value="HOD">Chef de departement</option>
+												<option value="Staff">Employe</option>
 											</select>
 										</div>
 									</div>
@@ -188,7 +188,7 @@
 										<div class="form-group">
 											<label style="font-size:16px;"><b></b></label>
 											<div class="modal-footer justify-content-center">
-												<button class="btn btn-primary" name="add_staff" id="add_staff" data-toggle="modal">Add&nbsp;Staff</button>
+												<button class="btn btn-primary" name="add_staff" id="add_staff" data-toggle="modal">Ajouter&nbsp;personnel</button>
 											</div>
 										</div>
 									</div>
@@ -199,10 +199,10 @@
 				</div>
 
 			</div>
-			<?php include('includes/footer.php'); ?>
+			
 		</div>
 	</div>
-	<!-- js -->
+	
 	<?php include('includes/scripts.php')?>
 </body>
 </html>

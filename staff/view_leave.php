@@ -30,6 +30,36 @@
       }
 
 	</style>
+	
+<style>
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
+</style>
+
+
+
+<script>
+function printContent() {
+    var content = document.querySelector('.main-container').innerHTML;
+    var mywindow = window.open('', 'Imprimer', 'height=600,width=800');
+    mywindow.document.write('<html><head><title>Impression</title>');
+    mywindow.document.write('</head><body>');
+    mywindow.document.write(content);
+    mywindow.document.write('</body></html>');
+
+    mywindow.document.close();
+    mywindow.focus();
+    mywindow.print();
+    mywindow.close();
+    return true;
+}
+</script>
+
+
+
 
 <body>
 	<div class="pre-loader">
@@ -242,7 +272,8 @@
 
 			</div>
 			
-			
+			<button class="btn btn-primary no-print" onclick="printContent()">Imprimer</button> <!-- Ajout de la classe no-print -->
+
 		</div>
 	</div>
 	<!-- js -->

@@ -35,7 +35,7 @@
 <body>
 	<div class="pre-loader">
 		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="../vendors/images/Logo.png" alt=""></div>
+			<div class="loader-logo"><img src="../vendors/images/Image3.png" alt=""></div>
 			<div class='loader-progress' id="progress_div">
 				<div class='bar' id='bar1'></div>
 			</div>
@@ -61,12 +61,12 @@
 						<div class="row">
 							<div class="col-md-6 col-sm-12">
 								<div class="title">
-									<h4>type de conge</h4>
+									<h4>Type de congé</h4>
 								</div>
 								<nav aria-label="breadcrumb" role="navigation">
 									<ol class="breadcrumb">
-										<li class="breadcrumb-item"><a href="admin_dashboard.php">Dashboard</a></li>
-										<li class="breadcrumb-item active" aria-current="page">modifier type conge</li>
+										<li class="breadcrumb-item"><a href="admin_dashboard.php">Tableau de bord</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Modifier type congé</li>
 									</ol>
 								</nav>
 							</div>
@@ -76,7 +76,7 @@
 					<div class="row">
 						<div class="col-lg-4 col-md-6 col-sm-12 mb-30">
 							<div class="card-box pd-30 pt-10 height-100-p">
-								<h2 class="mb-30 h4">modifier</h2>
+								<h2 class="mb-30 h4">Modifier</h2>
 								<section>
 									<?php
 									$query = mysqli_query($conn,"SELECT * from tblleavetype where id = '$get_id'")or die(mysqli_error());
@@ -86,7 +86,7 @@
 									<div class="row">
 										<div class="col-md-12">
 											<div class="form-group">
-												<label >type de conge</label>
+												<label >Type de congé</label>
 												<input name="leavetype" type="text" class="form-control" required="true" autocomplete="off" value="<?php echo $row['LeaveType']; ?>">
 											</div>
 										</div>
@@ -102,7 +102,7 @@
 									<div class="row">
 										<div class="col-md-12">
 											<div class="form-group">
-												<label> Date debut</label>
+												<label> Date début</label>
 												<input name="date_from" class="form-control" type="date" value="<?php echo $row['date_from']; ?>">
 											</div>
 										</div>
@@ -128,14 +128,14 @@
 						
 						<div class="col-lg-8 col-md-6 col-sm-12 mb-30">
 							<div class="card-box pd-30 pt-10 height-100-p">
-								<h2 class="mb-30 h4">type de conge</h2>
+								<h2 class="mb-30 h4">Type de congé</h2>
 								<div class="pb-20">
 									<table class="data-table table stripe hover nowrap">
 										<thead>
 										<tr>
-											<th class="table-plus">type conge</th>
-											<th class="table-plus">DESCRIPTION</th>
-											<th table-plus>DATE RANGE</th>
+											<th class="table-plus">Type congé</th>
+											<th class="table-plus">Description</th>
+											<th table-plus>Plage de date</th>
 											<th class="datatable-nosort">ACTION</th>
 										</tr>
 										</thead>

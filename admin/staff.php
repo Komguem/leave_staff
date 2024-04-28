@@ -17,7 +17,7 @@ if (isset($_GET['delete'])) {
 <body>
 	<div class="pre-loader">
 		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="../vendors/images/Logo.png" alt=""></div>
+			<div class="loader-logo"><img src="../vendors/images/Image3.png" alt=""></div>
 			<div class='loader-progress' id="progress_div">
 				<div class='bar' id='bar1'></div>
 			</div>
@@ -56,7 +56,7 @@ if (isset($_GET['delete'])) {
 						<div class="d-flex flex-wrap">
 							<div class="widget-data">
 								<div class="weight-700 font-24 text-dark"><?php echo($empcount);?></div>
-								<div class="font-14 text-secondary weight-500">Total Employes</div>
+								<div class="font-14 text-secondary weight-500">Total Employés</div>
 							</div>
 							<div class="widget-icon">
 								<div class="icon" data-color="#00eccf"><i class="icon-copy dw dw-user-2"></i></div>
@@ -75,7 +75,7 @@ if (isset($_GET['delete'])) {
 						<div class="d-flex flex-wrap">
 							<div class="widget-data">
 								<div class="weight-700 font-24 text-dark"><?php echo htmlentities($count_reg_staff); ?></div>
-								<div class="font-14 text-secondary weight-500">employe</div>
+								<div class="font-14 text-secondary weight-500">Employé</div>
 							</div>
 							<div class="widget-icon">
 								<div class="icon" data-color="#09cc06"><span class="icon-copy fa fa-hourglass"></span></div>
@@ -94,7 +94,7 @@ if (isset($_GET['delete'])) {
 						<div class="d-flex flex-wrap">
 							<div class="widget-data">
 								<div class="weight-700 font-24 text-dark"><?php echo($count_reg_hod); ?></div>
-								<div class="font-14 text-secondary weight-500"> CHEF Departrment </div>
+								<div class="font-14 text-secondary weight-500"> Chef de Département </div>
 							</div>
 							<div class="widget-icon">
 								<div class="icon"><i class="icon-copy fa fa-hourglass-end" aria-hidden="true"></i></div>
@@ -125,7 +125,7 @@ if (isset($_GET['delete'])) {
 
 			<div class="card-box mb-30">
 				<div class="pd-20">
-						<h2 class="text-blue h4">TOUS LES EMPLOYES</h2>
+						<h2 class="text-blue h4">Tous les Employés</h2>
 					</div>
 				<div class="pb-20">
 					<table class="data-table table stripe hover nowrap">
@@ -134,8 +134,8 @@ if (isset($_GET['delete'])) {
 								<th class="table-plus">NOM</th>
 								<th>EMAIL</th>
 								<th>DEPARTEMENT</th>
-								<th>POSITION</th>
-								<th>CONGE</th>
+								<th>ROLE</th>
+								<th>CONGÉ</th>
 								<th class="datatable-nosort">ACTION</th>
 							</tr>
 						</thead>

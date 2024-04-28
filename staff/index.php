@@ -36,9 +36,10 @@
 						?>
 
 						<h4 class="font-20 weight-500 mb-10 text-capitalize">
-							BIENEVUE <div class="weight-600 font-30 text-blue"><?php echo $row['FirstName']. " " .$row['LastName']; ?>,</div>
+							WELCOME<div class="weight-600 font-30 text-blue"><?php echo $row['FirstName']. " " .$row['LastName']; ?>,</div>
 						</h4>
-						<p class="font-18 max-width-600">Votre sante ..notre priorite</p>
+						<p class="font-18 max-width-600">Always have time to rest......</p>
+						<p class="font-18 max-width-600">......Your well-being our priority!</p>
 					</div>
 				</div>
 			</div>
@@ -47,7 +48,7 @@
 				<div class="col-lg-4 col-md-6 mb-20">
 					<div class="card-box height-100-p pd-20 min-height-200px">
 						<div class="d-flex justify-content-between pb-10">
-							<div class="h5 mb-0">Chef de departement</div>
+							<div class="h5 mb-0">Chef de département</div>
 							<div class="table-actions">
 								<a title="VIEW" href="staff.php"><i class="icon-copy ion-disc" data-color="#17a2b8"></i></a>	
 							</div>
@@ -93,7 +94,7 @@
 				<div class="col-lg-4 col-md-6 mb-20">
 					<div class="card-box height-100-p pd-20 min-height-200px">
 						<div class="d-flex justify-content-between">
-							<div class="h5 mb-0">Employés</div>
+							<div class="h5 mb-0">Employeur</div>
 							<div class="table-actions">
 								<a title="VIEW" href="staff.php"><i class="icon-copy ion-disc" data-color="#17a2b8"></i></a>	
 							</div>
@@ -140,7 +141,7 @@
 								<th>Date de retour</th>
 								<th>Nombre de jours</th>
 								<th>Chef de départment</th>
-								<th>REG. STATUS</th>
+								<th>DRH</th>
 								<th class="datatable-nosort">ACTION</th>
 							</tr>
 						</thead>
@@ -169,7 +170,7 @@
                                             <?php } if($stats==2)  { ?>
                                            <span style="color: red">Refusé</span>
                                             <?php } if($stats==0)  { ?>
-	                                       <span style="color: blue">En attentee</span>
+	                                       <span style="color: blue">En attente</span>
 	                                       <?php } ?>
 
                                     </td>

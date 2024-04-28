@@ -122,12 +122,12 @@
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>CONGE DETAILS</h4>
+								<h4>DÉTAILS DES CONGÉS</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="admin_dashboard.php">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Leave</li>
+									<li class="breadcrumb-item"><a href="admin_dashboard.php">Accueil</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Congés</li>
 								</ol>
 							</nav>
 						</div>
@@ -137,7 +137,7 @@
 				<div class="pd-20 card-box mb-30">
 					<div class="clearfix">
 						<div class="pull-left">
-							<h4 class="text-blue h4">Detail</h4>
+							<h4 class="text-blue h4">Détails des congés</h4>
 							<p class="mb-20"></p>
 						</div>
 					</div>
@@ -165,13 +165,13 @@
 						<div class="row">
 							<div class="col-md-4 col-sm-12">
 								<div class="form-group">
-									<label style="font-size:16px;"><b>nom</b></label>
+									<label style="font-size:16px;"><b>Nom complet</b></label>
 									<input type="text" class="selectpicker form-control" data-style="btn-outline-primary" readonly value="<?php echo htmlentities($result->FirstName." ".$result->LastName);?>">
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-12">
 								<div class="form-group">
-									<label style="font-size:16px;"><b>Email </b></label>
+									<label style="font-size:16px;"><b>Email</b></label>
 									<input type="text" class="selectpicker form-control" data-style="btn-outline-info" readonly value="<?php echo htmlentities($result->EmailId);?>">
 								</div>
 							</div>
@@ -183,51 +183,51 @@
 							</div>
 							<div class="col-md-4 col-sm-12">
 								<div class="form-group">
-									<label style="font-size:16px;"><b>Numero</b></label>
+									<label style="font-size:16px;"><b>Numéro</b></label>
 									<input type="text" class="selectpicker form-control" data-style="btn-outline-primary" readonly value="<?php echo htmlentities($result->Phonenumber);?>">
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-12">
 								<div class="form-group">
-									<label style="font-size:16px;"><b>type de conge</b></label>
+									<label style="font-size:16px;"><b>Type de congés</b></label>
 									<input type="text" class="selectpicker form-control" data-style="btn-outline-info" readonly value="<?php echo htmlentities($result->LeaveType);?>">
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-12">
 								<div class="form-group">
-									<label style="font-size:16px;"><b>date demande</b></label>
+									<label style="font-size:16px;"><b>Date de la demande</b></label>
 									<input type="text" class="selectpicker form-control" data-style="btn-outline-success" readonly value="<?php echo htmlentities($result->PostingDate);?>">
 								</div>
 							</div>
 
 							<div class="col-md-4 col-sm-12">
 								<div class="form-group">
-									<label style="font-size:16px;"><b>nombre de jours</b></label>
+									<label style="font-size:16px;"><b>Nombre de jours</b></label>
 									<input type="text" class="selectpicker form-control" data-style="btn-outline-info" readonly name="num_days" value="<?php echo htmlentities($result->num_days);?>">
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-12">
 								<div class="form-group">
-									<label style="font-size:16px;"><b>nombre de jours restant</b></label>
+									<label style="font-size:16px;"><b>Nombre de jours disponibles</b></label>
 									<input type="text" class="selectpicker form-control" data-style="btn-outline-info" readonly name="av_leave" value="<?php echo htmlentities($result->Av_leave);?>">
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
-									<label style="font-size:16px;"><b>periode</b></label>
+									<label style="font-size:16px;"><b>Période de congé</b></label>
 									<input type="text" class="selectpicker form-control" data-style="btn-outline-info" readonly value="From <?php echo htmlentities($result->FromDate);?> to <?php echo htmlentities($result->ToDate);?>">
 								</div>
 							</div>
 
 						</div>
 						<div class="form-group row">
-								<label style="font-size:16px;" class="col-sm-12 col-md-2 col-form-label"><b>motif</b></label>
+								<label style="font-size:16px;" class="col-sm-12 col-md-2 col-form-label"><b>Motif du congé</b></label>
 								<div class="col-sm-12 col-md-10">
 									<textarea name=""class="form-control text_area" readonly type="text"><?php echo htmlentities($result->Description);?></textarea>
 								</div>
 						</div>
 						<div class="form-group row">
-								<label style="font-size:16px;" class="col-sm-12 col-md-2 col-form-label"><b>avis CD </b></label>
+								<label style="font-size:16px;" class="col-sm-12 col-md-2 col-form-label"><b>Commentaires CD</b></label>
 								<div class="col-sm-12 col-md-10">
 									<?php
 									if ($result->AdminRemark==""): ?>
@@ -238,7 +238,7 @@
 								</div>
 						</div>
 						<div class="form-group row">
-								<label style="font-size:16px;" class="col-sm-12 col-md-2 col-form-label"><b>remarque</b></label>
+								<label style="font-size:16px;" class="col-sm-12 col-md-2 col-form-label"><b>Commentaires DRH  </b></label>
 								<div class="col-sm-12 col-md-10">
 									<?php
 									if ($result->registra_remarks==""): ?>
@@ -251,7 +251,7 @@
 						<div class="row">
 							<div class="col-md-3">
 								<div class="form-group">
-								   <label style="font-size:16px;"><b>decision</b></label>
+								   <label style="font-size:16px;"><b>Date de l'action</b></label>
 								   <?php
 									if ($result->AdminRemarkDate==""): ?>
 									  <input type="text" class="selectpicker form-control" data-style="btn-outline-primary" readonly value="<?php echo "NA"; ?>">
@@ -263,7 +263,7 @@
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-									<label style="font-size:16px;"><b>avis CD</b></label>
+									<label style="font-size:16px;"><b>Statut du congé Par CD</b></label>
 									<?php $stats=$result->Status;?>
 									<?php
 									if ($stats==1): ?>
@@ -279,13 +279,13 @@
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-									<label style="font-size:16px;"><b>Registra/Registry Status</b></label>
-									<?php $ad_stats=$result->admin_status;?>
+									<label style="font-size:16px;"><b>Statut du congé Par DRH</b></label>
+									<?php $stats=$result->admin_status;?>
 									<?php
-									if ($ad_stats==1): ?>
+									if ($stats==1): ?>
 									  <input type="text" style="color: green;" class="selectpicker form-control" data-style="btn-outline-primary" readonly value="<?php echo "Approved"; ?>">
 									<?php
-									 elseif ($ad_stats==2): ?>
+									 elseif ($stats==2): ?>
 									  <input type="text" style="color: red; font-size: 16px;" class="selectpicker form-control" data-style="btn-outline-primary" readonly value="<?php echo "Rejected"; ?>">
 									  <?php
 									else: ?>
@@ -307,16 +307,16 @@
 									</div>
 								</div>
 							</div>
-
+							
 							<form name="adminaction" method="post">
   								<div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 									<div class="modal-dialog modal-dialog-centered" role="document">
 										<div class="modal-content">
 											<div class="modal-body text-center font-18">
-												<h4 class="mb-20">Decision</h4>
+												<h4 class="mb-20">Prendre une décision</h4>
 												<select name="status" required class="custom-select form-control">
-													<option value="">Option</option>
-				                                          <option value="1">Approuve</option>
+													<option value="">Choisissez une option</option>
+				                                          <option value="1">Approuvé</option>
 				                                          <option value="2">Rejeté</option>
 												</select>
 
